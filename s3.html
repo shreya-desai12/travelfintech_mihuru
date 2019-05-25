@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<title>Mihuru</title>
+  <head lang="en">
+  <meta charset="UTF-8">
+  <script language="JavaScript">
+    function showInput() {
+        document.getElementById('dfname').innerHTML = 
+                    document.getElementById("fname").value;
+        document.getElementById('dlname').innerHTML = 
+                    document.getElementById("lname").value;
+        document.getElementById('dcontact').innerHTML = 
+                    document.getElementById("contact").value;
+        document.getElementById('dpan').innerHTML = 
+                    document.getElementById("pan").value;
+        document.getElementById('daadhar').innerHTML = 
+                    document.getElementById("aadhar").value;
+         document.getElementById('demployment').innerHTML = 
+                    document.getElementById("employment").value;   
+        alert("ThankYou for Signing Up with Mihuru!");    
+        getElementById("button").style.display='block';
+         this.style.display='none';   
+    }
+    
+  </script>
+<style type="text/css">
+body{
+	background-image: url("s2_slide1.png");
+        background-size: cover;
+	}
+  .container{
+        display: grid;
+        grid-template-columns: 60% 37%;
+        margin-top: 30vh;
+
+      }
+     .subcontainer{
+        display: grid;
+        grid-template-columns: 50% 50%;
+        border: 3px solid rgb(255, 255, 255);
+        height: 45vh;
+        padding-top: 5vh;
+        padding-left: 5vh;
+        opacity: 0.5;
+        background-color: #ccc;
+         margin-left: 5vh;
+      }
+      .column3{
+      	padding-top: 5vh;
+        padding-left: 5vh;
+        opacity: 0.8;
+        background-color: #fff;
+        border: 3px solid rgb(255, 255, 255);
+        margin-left: 8vh;
+        font-size: 3vh;
+      }
+      .input{
+      	background-color: #fff;
+      }
+      .button{
+      	margin-top: 5vh;
+      	margin-left: 25%;
+      	width: 20vh;
+      	height: 5vh;
+      	background-color: #4CAF50; /* Green */
+	  border: none;
+	  color: white;
+	  cursor: pointer;
+	  background-color: transparent;
+	  color: white;
+	  border: 2px solid #fff;
+	  text-align: center;
+	  text-decoration: none;
+      }
+      .button:hover{
+text-decoration:none;
+  background-color: #fff;
+  color:black;
+}
+@media screen and (max-width: 1100px) {
+        .container{
+        	display:block;
+        	margin-top: 5vh;
+        	text-align:center;
+
+        	
+     }
+        .subcontainer{
+        	width:100%;
+        	margin:auto;
+        	margin-left: 5%;
+        }
+        .column3{
+        	margin:auto;
+        	width:100%;
+        	margin-top: 10vh;
+
+	        	margin-left: 5%;
+	        	margin-right: 5%;
+        	display: inline-block;
+        }
+      .button{
+      	margin-top: -30vh;
+      	position:absolute;
+      	margin-left: 40%;
+      }
+      }
+     /* @media screen and (max-width: 700px){
+			.subcontainer{
+			display: grid;
+			grid-template-columns: 100%;
+        	width:100%;
+        	margin:auto;
+        	margin-left: 5%;
+        }
+			}*/
+</style>
+  </head>
+<body>
+<div class="container">
+	<div class="subcontainer">
+       <div>
+         <form>
+        <label><b>First Name</b></label>
+        <input type="text" name="message" id="fname" pattern="[A-Za-z]{11}" required>
+      </form>
+       </div>
+       <div>
+         <form>
+            <label><b>PAN ID</b></label>
+            <input type="number" name="message" id="pan" required>
+          </form>
+       </div>
+   
+       <div>
+       	<form>
+            <label><b>Last Name</b></label>
+            <input type="text" name="message" id="lname" required>
+          </form>
+       </div>
+       <div>
+       	  <form>
+            <label><b>AADHAR</b></label>
+            <input type="number" name="message" id="aadhar" required>
+          </form>
+       </div>
+       
+       	<div>
+       	<form>
+            <label><b>Contact</b></label>
+            <input type="number" name="message" maxlength="10" id="contact" required>
+          </form>
+       	</div>
+       	<div>
+       		<form >
+       			<label><b>Employment Status</b></label>
+			  <select id="employment">
+			    <option value="Employee">Employee</option>
+			    <option value="Worker">Worker</option>
+			    <option value="Self-employed">Self-employed</option>
+			  </select>
+			  <!-- <br><br>
+			  <input type="text" name="message" id="employment"> -->
+			</form>
+       	</div>
+       	
+     </div>
+     <div class="column3">
+     	
+         <label>Your Data: </label>
+         <p><span id='dfname'></span></p>
+         <p><span id='dlname'></span></p>
+          <p><span id='dcontact'></span></p>
+         <p><span id='dpan'></span></p>
+         <p><span id='daadhar'></span></p>
+         <p><span id='demployment'></span></p>
+     </div>
+  </div>
+  <div >
+  	<input class="button" type="submit" onclick="showInput();"><br/>
+  </div>
+
+  <!-- <input type="submit" onclick="showInput();"><br/>
+  <label>Your input: </label>
+  <p><span id='display'></span></p> -->
+</body>
+</html>
